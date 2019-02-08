@@ -8,8 +8,8 @@
   const canvas = document.querySelector('.graph');
 const ctx = canvas.getContext('2d');
 
-const inputPoints.value = 30;
-const inputSpeed.value = 0.002;
+const inputPoints = 30;
+const inputSpeed = 0.002;
 
 const resetMultip = document.getElementById('reset');
 const plusTen = document.getElementById('plusTen');
@@ -64,12 +64,12 @@ canvas.height = size.sh;
 let m = 1;
 let drawGraph = function drawGraph() {
   let root = document.documentElement;
-  let n = inputPoints.value;
+  let n = inputPoints;
   
   if (m >= 999) {
     m = 0;
   } else {
-    m += +inputSpeed.value; 
+    m += +inputSpeed; 
   }
  
   let r = Math.floor((size.w - 2 * size.o) * size.s / 2);
@@ -130,8 +130,8 @@ let circle = function circle(c, color) {
 
 function patterns(value) {
   m = value;
-  inputSpeed.value  = 0.002;
-  inputPoints.value = 30;
+  inputSpeed  = 0.002;
+  inputPoints = 30;
 };
 
 window.addEventListener('load', drawGraph);
