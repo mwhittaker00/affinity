@@ -1,0 +1,303 @@
+html{
+  height:100%;
+  box-sizing: border-box;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  padding-bottom: 35px;
+  min-height: 100%;
+  background-color: #0c0a16;
+  color: #f1f1f1;
+  font-family: 'Open Sans',Helvetica,Arial,Verdana,sans-serif;
+}
+
+a{
+  color: #004784;
+  font-weight:900;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a{
+  font-weight:400;
+}
+
+.h4, .h5, .h6, h4, h5, h6{
+  margin-top:0px;
+  margin-bottom:5px;
+}
+hr{
+  margin: 0px 0 5px 0;
+  border-top:2px solid #1180cc;
+}
+
+textarea{
+  color:#000;
+}
+
+a.light-link{
+  color:#80ffff;
+}
+.clear{
+  clear:both;
+}
+
+#logo{
+  position:relative;
+  top:-5px;
+}
+
+.navbar-nav{
+  font-family: 'Oswald', sans-serif;
+  font-size:16px;
+}
+
+.user-link{
+  position:relative;
+  top:15px;
+  color:#333;
+}
+
+.team-name{
+}
+
+#status-alert{
+  color:#000;
+  background-color:#fff;
+  position:absolute;
+  top:50px;
+  border:2px solid #000;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  z-index: 1000;
+}
+
+#main-container{
+  width:90%;
+  margin:0 auto 20px auto;
+}
+
+.mini-team-logo{
+  height:50px;
+}
+
+.team-info-box{
+  margin:8px 0;
+}
+
+.team-info-box a{
+  color: #e9e9ff;
+}
+
+.team-colors-bar{
+  height:10px;
+  width:100%;
+}
+
+.team-colors-bar-small{
+  height:2px;
+}
+
+.team-colors-box{
+  height:40px;
+  width:40px;
+  margin:0 10px 0 0;
+}
+
+.sm-team-colors-box{
+  height:20px;
+  width:20px;
+}
+
+.team-colors-short{
+  height:15px;
+}
+
+.align-right{
+  text-align:right;
+}
+
+
+.schedule-column .well{
+  font-size:12px;
+}
+/*
+colors for the game result cards for the current player
+when viewing schedules
+*/
+.current-day{
+  background-color: #feffcb;
+}
+
+.winner{
+  background-color: #efffef;
+  border:1px solid #008800;
+}
+.loser{
+  background-color: #ffefef;
+  border:1px solid #880000;
+}
+
+.player-cards .col-sm-4{
+  padding:1px;
+}
+
+.player-row{
+  border-top:1px solid #efefef;
+  padding:5px 0 0 0;
+}
+
+/** Division Page **/
+
+.division-comm{
+  padding:10px 0 0 0;
+  border-bottom:1px solid #ebebeb;
+}
+
+.division-comm:last-of-type{
+  border-bottom:none;
+}
+
+.comm-timestamp{
+  position:absolute;
+  right:7%;
+}
+.division-comm-content{
+  padding:10px;
+}
+
+#division-message textarea{
+  width:100%;
+  min-height: 100px;
+}
+
+#division-message .btn{
+  font-size: 1.5em;
+}
+
+footer{
+  position:absolute;
+  right:0;
+  bottom:0;
+  left:0;
+  text-align:center;
+  height:35px;
+  width:100%;
+  background-color:#f8f8f8;
+  color:#333;
+}
+
+footer a{
+  color: #555;
+}
+
+footer ul{
+  list-style-type:none;
+  margin-top:5px;
+}
+
+footer ul li{
+  display:inline;
+  padding: 0 8px;
+}
+
+
+/* FOOTABLE OVERRIDES */
+
+table.footable tbody{
+  font-size:14px;
+}
+
+table.footable tbody a{
+  color: #e9e9ff;
+}
+
+table.footable.dropdown-menu a{
+  color:#444;
+}
+/* BOOTSTRAP OVERRIDES */
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color:#666;
+}
+
+.navbar-form .form-control{
+  height:25px;
+  font-size: 11px;
+  max-width:100px;
+  padding:6px;
+  margin-top:4px;
+}
+
+.navbar-form .btn{
+  padding:2px 9px;
+  position:relative;
+  top:2px;
+}
+
+.bid-form .form-group{
+  margin:0;
+}
+
+.bid-form .form-control{
+  width:60px;
+  height:20px;
+  padding:1px;
+  margin:0;
+  font-size:11px;
+}
+
+.bid-form .btn{
+  padding:1px 5px;
+  font-size:12px;
+}
+
+@media only screen and (min-width: 768px){
+  .navbar{
+    border-radius:0px;
+  }
+}
+
+.nav-pills>li>a, .nav-tabs>li>a{
+  color:#fff;
+  border-radius:0px;
+}
+
+.nav-pills>li>a:hover, .nav-tabs>li>a:hover{
+  color:#333;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background-color:#337ab7;
+}
+
+ .btn{
+   font-weight:bold;
+ }
+
+ .well{
+   color: #333;
+ }
+
+ .well-sm{
+   margin:1px;
+   padding:4px;
+ }
