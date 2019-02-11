@@ -46,6 +46,10 @@ textarea{
   color:#000;
 }
 
+video {
+  max-width: 100%;
+}
+
 a.light-link{
   color:#80ffff;
 }
