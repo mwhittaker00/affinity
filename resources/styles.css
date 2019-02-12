@@ -25,6 +25,11 @@ a{
   font-weight:900;
 }
 
+// overrides bootstrap's a:hover so we just underline it
+a:hover{
+  color: #8dcaff;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Oswald', sans-serif;
 }
