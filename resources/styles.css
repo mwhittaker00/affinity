@@ -25,8 +25,8 @@ a{
   font-weight:900;
 }
 
-// overrides bootstrap's a:hover so we just underline it
-a:hover{
+// overrides bootstraps a:hover so we just underline it
+#main-container a:hover{
   color: #8dcaff;
 }
 
