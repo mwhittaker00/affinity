@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dev Blog | A Level Four Game</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald' rel='stylesheet' type='text/css'>
+  <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/resources/styles.css" rel="stylesheet">
+</head>
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand h1" href='/'>Project Atkinson</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog/">Dev Blog</a></li>
+        <li><a href="#" target="_blank">Community</a></li>
+        <li><a href="/level4.html">Level Four Games</a></li>
+      </ul>
+
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+ 
+  <div id='main-container' class='container-fluid'>
+    <div class='row-fluid'>
+      <div class='col-md-3'>
+      </div>
+      <div class='col-md-9'>
+        <h1>
+          Getting started.
+          <br />
+          <small>February 12, 2019</small>
+        </h1>
+        <p>
+          Hi. Welcome to the first of hopefully many developer updates. I've always enjoyed reading these types of things when I'm following projects and I figured it wouldn't be a bad idea to try one myself. It could be a really good way to let people know why things are being made the way they are, and also give people an opportunity to provide extremely valuable input sooner rather than later. Few things are worse than spending <em>hours</em> working ona a feature just to find out nobody even cares about it.
+        </p>
+        <p>
+          For this first update, I'm really excited to report that there has been very steady progress. Of course, that's to be expected at the start of a project - 80% of the work is done in the first 20% of the time - but it's my hope that a little bit of community accountability through these reports will help me stay on task. That beings said, let get into what we're doing and what we plan to accomlpish next.
+        </p>
+        <p>
+          <center>
+            <video width="600" controls>
+              <source src="/resources/45400854_297558267629514_75696935428187714_n.mp4" type="video/mp4">
+            </video>
+          </center>
+        </p>
+        
+        <p>
+          There are a few things going on in this video. First, movement is working and feels really good. This is such a no-brainer to have in the game, but moving around the world needs to feel like second nature to the player. Next, the player is interacting with the world in a way they might expect to. You can read signs and open chests, pausing the game to give you time to read the message and digest what's happening. In the case of chests, those items are being stored in an actual inventory which isn't being communicated to the screen yet. When the player approaches a building, there is a perception of depth as the player overlaps the face of the building, but is partially covered when walking behind it. Even your hat starts to get covered up as you walk under the door frame.
+        </p>
+        <p>
+          One of the key features of the game will be the ability to switch between elemental powers. Players will be able to decide whether they want to use water, lightning, fire, or earth-based attacks on the fly. Eventually this will be something the player can directly control, cycling through the list of elements available to them. For now this is being handled through the signs. In the video, the player reads a sign and is switched to using the specified element. When they fire a projectile, it moves forward until colliding with an object and it explodes. Right now it doesn't mean a whole lot, as the attack is simply colliding with a rock. We're still successfully detecting those collisions and doing something about it though, which is a great foundation for when attacks need to do something to the object they're colliding with.
+        </p>
+        <h2>Next steps.</h2>
+        <p>
+          There's still a lot left to do. The video shows the design and animations for the Crawler enemy. The Crawler is going to need to become an actual object that can move around the scene freely and be aggressive towards the player. Just like everything else, finishing the Crawler is going to be a huge start towards creating other enemies in the game. 
+        </p>
+        <p>
+          Here are some things I'd like to have done for next week's update:
+        </p>
+        <ul>
+          <li>Display player stats on the HUD
+            <ul>
+              <li>The player has a set amount of health and magic. Getting injured should consume health, and using an ability should consume magic. This information should be displayed to players in a way that is useful and unobstrusive.</li>
+            </ul>
+          </li>
+          <li>A system for replenishing health and magic.
+            <ul>
+              <li>Health and magic potions exist, but so far there is no way to use them. Additionally, magic should replenish itself over time. The replenishment rate isn't so important right now, that can be tweaked for balance later on. </li>
+            </ul>          
+          </li>
+          <li>Add key inventory items to the HUD
+            <ul>
+              <li>Show the player how many potions they have and of which type. Again, it needs to be useful but shouldn't interfere too much with their ability to see what's happening in the game. </li>
+            </ul>
+          </li>
+          <li>Show current attack element on the HUD
+            <ul>
+              <li>The player's color is not representative of the attack they have decided to use, so there needs to be another method to communicate that to players. </li>
+            </ul>
+          </li>
+          <li>Change attack element on demand, rather than requiring a sign or other in-game trigger
+            <ul>
+              <li>Situations in the game could change quickly, so players need to be able to swap in different elements on the fly. This could probably be done by cycling through the list of available elements, with the HUD communicating the currently selected element. </li>
+            </ul>
+          </li>
+          <li>Get the Crawler to move around, detect the player, and then cause damage to the player.
+            <ul>
+              <li>For now, let the Crawler damage the player on contact. For bonus points, cause the player to "jump" away from the Crawler when they're hit. </li>
+            </ul>
+          </li>
+          <li>Allow the player to attack and defeat the Crawler.
+            <ul>
+              <li>Detect the collisions, affect the Crawler somehow (freeze in place, move in a direction away from the attack, blink colors, etc.) and show a fancy <em>*poof*</em> animation once the enemy is defeated.</li>
+            </ul>
+          </li>
+        </ul>
+        
+        <h2>One more thing.</h2>
+        <p>
+          The game has a name, but I'm keeping quiet about that until the business side of all of this is taken care of. It does have a totally meaningless codename/working title though: <strong>Project Atkinson</strong>. It's not supposed to mean much, but it's nice to call it something other than "The Game" while I'm working on it.
+        </p>
+      </div>
+  </div>
+  
+<footer>
+  A Level Four game.
+  
+</footer>
+</body>
+</html>
+</body>
+</html>
